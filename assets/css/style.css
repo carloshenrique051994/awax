@@ -1,9 +1,12 @@
 :root{
-    --laranja: #B28756;
+    --dourado: #B28756;
+    --cor-letra-descricao: #CCC;
+    --cor-letra-titulo: #000;
 }
 body{
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     font-size: 13px;
+    overflow-x: hidden;
 }
 *{
     margin: 0;
@@ -13,6 +16,18 @@ body{
 header {
     height: 100px;
     background-color: black;
+}
+.button {
+    display: inline-block;
+    background-color: var(--dourado);
+    color: white;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 20px;
 }
 .header{
     display: flex;
@@ -27,7 +42,7 @@ header {
 .logo-img{
     width: 80px;
     height: 80px;
-    background-color: var(--laranja);
+    background-color: var(--dourado);
     border-radius: 40px;
 }
 .menu{
@@ -56,7 +71,7 @@ header {
 }
 .menu li a:hover,
 .menu .active a{
-    border-bottom: 5px solid var(--laranja);
+    border-bottom: 5px solid var(--dourado);
     color: gray;
 }
 .banner{
@@ -91,21 +106,351 @@ header {
     font-size: 50px;
 }
 .banner h1 span{
-    color: var(--laranja);
+    color: var(--dourado);
 }
 .banner h2{
     text-transform: uppercase;
     margin-top: 20px;
 }
-.banner a {
-    display: block;
-    background-color: var(--laranja);
-    color: white;
-    text-transform: uppercase;
+
+.banner .sliders-pointers{
+    width: 100vw;
+    height: 20px;
+    position: absolute;
+    margin-top: -50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner .pointer{
+    width: 15px;
+    height: 15px;
+    border: 2px solid var(--dourado);
+    border-radius: 8px;
+    margin-left: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+.banner .pointer.active{
+    background-color: var(--dourado);
+}
+
+.default{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.default .section-title{
+    font-size: 20px;
+}
+.default .section-desc{
     font-size: 12px;
+    color: var(--cor-letra-descricao);
+    margin-top: 13px;
+    margin-bottom: 40px;
+}
+.default .section-title,
+.default .section-desc{
+    text-align: center;
+    text-transform: uppercase;
     font-weight: 600;
-    text-decoration: none;
-    padding: 10px 30px;
+}
+
+.default .section-body{
+    margin: auto;
+    max-width: 1140px
+}
+.default.light{
+    background-color: #F7F7F7;
+}
+.default.light .section-title,
+.default.light .section-body{
+    color: #000;
+}
+
+.default.dark{
+    background-color: #000;
+}
+.default.dark .section-title,
+.default.dark .section-body{
+    color: #FFF;
+}
+
+
+
+
+
+/* CSS DE AREAS ESPECIFICAS*/
+.section-aboutus{
+    display: flex;
+}
+.section-aboutus--left p{
+    font-size: 14px;
+    line-height: 25px;
+}
+.section-aboutus--left{
+    flex: 1;
+}
+.section-aboutus--right{
+    width: 520px;
+    text-align: center;
+}
+.section-aboutus--right img{
+    width: 480px;
+    box-shadow: 0px 5px 10px #333;
+}
+.section-services{
+    display: flex;
+}
+
+.section-service{
+    flex: 1;
+    text-align: center;
+    border-right: 1px solid #444;
+    padding: 15px;
+}
+.section-service:first-child{
+    border-left: 1px solid #444;
+}
+.section-service h4{
     margin-top: 20px;
-    border-radius: 20px;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+.section-service p{
+    margin-top: 10px;
+    font-size: 13px;
+    color: #444;
+}
+
+
+.section-projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.section-projects--filters{
+    border: 1px solid #CCC;
+    background-color: #EEE;
+    border-radius: 30px;
+    display: inline-block;
+    padding: 0px 20px;
+    
+}
+.section-projects--filters ul,
+.section-projects--filters li{
+    list-style: none;
+}
+.section-projects--filters li{
+    display: inline-block;
+    text-transform: uppercase;
+    padding: 10px;
+    font-size: 13px;
+    border-left:1px solid #CCC;
+    color: #555;
+    border-bottom: 3px solid #EEE;
+    cursor: pointer;
+}
+.section-projects--filters li:hover,
+.section-projects--filters li.active{
+    border-bottom: 3px solid var(--dourado);
+}
+.section-projects--filters li:first-child{
+    border-left: 0;
+}
+.section-projects--photos{
+    width: 100vw;
+    max-width: 1140px;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.section-projects--photo{
+    width: 280px;
+}
+.section-projects--photoarea{
+    margin: 10px;
+    width: 260px;
+    height: 160px;
+}
+.section-projects--photoarea img{
+    width: inherit;
+    height: inherit;
+}
+.section-projects--photoinfo{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: inherit;
+    height: inherit;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+}
+.section-projects--photoinfo h5{
+    font-size: 18px;
+    font-weight: 600;
+}
+.section-projects--photoarea:hover .section-projects--photoinfo{
+    display: flex;
+}
+.bg-team{
+    background-image: url(../images/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 0px;
+}
+.section-team-area{
+    background-color: rgba(0, 0, 0, 0.8);
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.section-team{
+    overflow: hidden;
+    max-width: 880px;
+    margin: auto;
+}
+.section-team .sliders{
+    width: 1000vw;
+    height: 100%;
+}
+.section-team .slide{
+    width: 280px;
+    height: 100%;
+    min-height: 300px;
+    display: inline-block;
+    background-color: #FFF;
+    margin-right: 20px;
+}
+.section-team .slidearea{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    padding: 30px;
+}
+.section-team-area .sliders-pointers{
+    margin-top: 30px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section-team-area .pointer{
+    width: 15px;
+    height: 15px;
+    border: 2px solid var(--dourado);
+    border-radius: 8px;
+    margin-left: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+.section-team-area .pointer.active{
+    background-color: var(--dourado);
+}
+.section-team--avatar{
+    width: 150px;
+    height: auto;
+}
+.section-team--name{
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 17px;
+    margin-top: 30px;
+}
+.section-team--role{
+    font-size: 14px;
+    color: #999;
+    margin: 5px;
+}
+.section-team--social {
+    display: flex;
+    margin-top: 20px;
+}
+.section-team--social a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    background-color: #CCC;
+    border-radius: 13px;
+    margin-right: 20px;
+}
+.section-team--social a:hover{
+    background-color: var(--dourado);
+}
+.area-clientes{
+    background-color: #f7f7f7;
+}
+.client{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+.section-title-client{
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+.section-client--name{
+    font-size: 20px;
+    font-weight:bold;
+    margin: 35px 0 10px 0px;
+}
+.section-client--role{
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 35px;
+}
+.client p{
+    font-size: 14px;
+    line-height: 25px;
+    color: #a4a4a4;
+    margin-top: 20px;
+}
+
+.section-body-empresas{
+    display: flex;
+    margin: -100px;
+    padding: 30px 40px;
+    border: 1px solid #CCC;
+    justify-content:space-evenly;
+    align-items: center;
+    background-color: white;
+}
+.empresas a{
+    padding: 50px;
+}
+
+.price-section{
+    display: flex;
+    justify-content: space-between;
+    background-color: #f7f7f7;
+}
+.prices{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 30px 50px;
+    margin: 0px 30px;
+}
+.prices p{
+    color: #a4a4a4;
+    font-size: 10px;
+}
+.price-section-line{
+    width: 10px;
+    height: 1px;
+    margin: 10px;
+    background-color: #a4a4a4;
+}
+.button-price{
+    background-color: #373737;
 }
