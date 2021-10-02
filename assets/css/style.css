@@ -454,3 +454,32 @@ header {
 .button-price{
     background-color: #373737;
 }
+
+.section-premium{
+    max-height: 400px;
+    margin-top: 80px;
+}
+.book-img{
+    background-image: url('/media/livros.png');
+    background-size:cover;
+    background-position: center;
+    width: 350px;
+    overflow: hidden;
+    margin-right: 110px;
+
+}
+
+.title-premium img{
+    margin-right: 15px;
+}
+.title-premium{
+    display: flex;
+    justify-content: start;
+}
+.desc-premium{
+    margin-bottom: 30px;
+    margin-left: 50px;
+    color: #828282;
+    
+}
+
