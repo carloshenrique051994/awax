@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -21,6 +21,7 @@
                 </div>
             </div>
             <div class="menu">
+                <img class="menu-opener" src="/assets/images/menu.png" alt="">
                 <nav>
                     <ul>
                         <li class="active"><a href="">Home</a></li>
@@ -374,13 +375,25 @@
 
         <section class="default light">
             <div class="section-body-empresas">
-                <div class="empresas">
-                    <a href=""><img src="/media/empresa1.png" alt=""></a>
-                    <a href=""><img src="/media/empresa2.png" alt=""></a>
-                    <a href=""><img src="/media/empresa3.png" alt=""></a>
-                    <a href=""><img src="/media/empresa4.png" alt=""></a>
-                    <a href=""><img src="/media/empresa5.png" alt=""></a>
-                    <a href=""><img src="/media/empresa6.png" alt=""></a>
+                <div class="section-empresas">
+                    <div class="empresas-img">
+                         <img src="/media/empresa1.png" alt="">
+                    </div>
+                    <div class="empresas-img">
+                         <img src="/media/empresa2.png" alt="">
+                    </div>
+                    <div class="empresas-img">
+                         <img src="/media/empresa3.png" alt="">
+                    </div>
+                    <div class="empresas-img">
+                         <img src="/media/empresa4.png" alt="">
+                    </div>
+                    <div class="empresas-img">
+                         <img src="/media/empresa5.png" alt="">
+                    </div>
+                    <div class="empresas-img">
+                         <img src="/media/empresa6.png" alt="">
+                    </div>
                 </div>
             </div>
 
@@ -390,8 +403,8 @@
             <div class="section-team-area area-clientes">
                 <div class="section-title-client">PRICE</div>
                 <div class="section-desc">PRICING TABLE</div>
-                <div class="section-body">
-                    <div class="price-section">
+                <div class="section-body section-price">
+                    <div class="section-prices">
                         <div class="prices">
                             <div class="price-title">
                                 <h3>EXPRESS</h3>
@@ -432,7 +445,7 @@
                             <a href="" class="button button-price">CHOOSE</a>
                         </div>
 
-                        <div class="prices">
+                        <div class="prices luxes">
                             <div class="price-title">
                                 <h3>LUXE</h3>
                             </div>
@@ -469,7 +482,7 @@
                             <div class="price-section-line"></div>
                             <p>Custom views</p>
 
-                            <a href="" class="button button-price">CHOOSE</a>
+                            <a href="" class="button button-price active-price">CHOOSE</a>
                         </div>
 
                     </div>
@@ -477,13 +490,16 @@
         </section>
 
         <section class="default">
-            <div class="section-title"><h1>PREMIUM</h1></div>
+            <div class="section-title">
+                <h1>PREMIUM</h1>
+            </div>
             <div class="section-desc" id="first-title">EVEN MORE FEATURES AVAILABLE</div>
             <div class="section-body">
-                <div class="section-aboutus section-premium">
-    <!--IMAGEM -->  <div class="section-aboutus--right book-img"></div>
+                <div class="section-premium">
+                    <!--IMAGEM -->
+                    <div class="section-premium--right"></div>
 
-                    <div class="section-aboutus--left premium-desc">
+                    <div class="section-premium--left">
                         <div class="title-premium">
                             <img src="assets/images/check.png" alt="">
                             <h2>FIRST FEATURE</h2>
@@ -495,7 +511,6 @@
                             <p>- FEATURE TWO</p>
                             <p>- FEATURE THREE</p>
                         </div>
-
 
                         <div class="title-premium">
                             <img src="assets/images/check.png" alt="">
@@ -514,11 +529,199 @@
                         </div>
                     </div>
                 </div>
-                <a href="" class="button">Learn More</a>
+                <br><br><br>
+                <hr>
+                <div class="premium-footer">
+                    <div class="premium-pointers">
+                        <div class="pointer active"></div>
+                        <div class="pointer"></div>
+                        <div class="pointer"></div>
+                    </div>
+                    <a href="" class="button button-premium">GET IN TOUCH</a>
+                </div>
+        </section>
+
+        <section class="default dark">
+            <div class="section-title">
+                <h1>SOME FACTS</h1>
+            </div>
+            <div class="section-desc">ABOUT OUR WORKS</div>
+            <div class="section-body">
+                <div class="section-services">
+                    <div class="section-service facts">
+                        <h1>1000</h1>
+                        <h4>DESIGN PROJECTS RELEASED</h4>
+                        <p>Praesent metus urna, feutiat a placerat elementum at leo</p>
+                    </div>
+                    <div class="section-service facts">
+                        <h1>900</h1>
+                        <h4>PHOTOS</h4>
+                        <p>Praesent metus urna, feutiat a placerat elementum at leo</p>
+                    </div>
+                    <div class="section-service facts">
+                        <h1>500</h1>
+                        <h4>MARKETING IDEAS</h4>
+                        <p>Praesent metus urna, feutiat a placerat elementum at leo</p>
+                    </div>
+                    <div class="section-service facts fact-none">
+                        <h1>100</h1>
+                        <h4>EXHIBITIONS</h4>
+                        <p>Praesent metus urna, feutiat a placerat elementum at leo</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="default light section-redes-sociais">
+            <div class="section-body-redes-sociais">
+                <div class="redes-sociais">
+                    <div class="share">
+                        <img id="share" src="./assets/images/share.png" alt="">
+                        <p id="tell-about-us">TELL ABOUT US:</p>
+                    </div>
+
+                    <div class="twitter">
+                        <a href=""><img src="/assets/images/twitter.png" alt=""></a>
+                        <p>152</p>
+                    </div>
+                    
+
+                    <div class="linkedin">
+                        <a href=""><img src="/assets/images/linkedin.png" alt=""></a>
+                        <p>31</p>
+                    </div>
+                   
+
+                    <div class="facebook">
+                        <a href=""><img src="/assets/images/facebook.png" alt=""></a>
+                        
+                        <p>165</p>
+                    </div>
+                    
+
+                    <div class="googleplus">
+                        <a href=""><img src="/assets/images/googleplus.png" alt=""></a>
+                        <p>22</p>
+                    </div>
+                    
+
+                    <div class="pinterest">
+                        <a href=""><img src="/assets/images/pinterest.png" alt=""></a>
+                        <p>165</p>
+                    </div>
+                    
+
+                </div>
+            </div>
+            </div>
+
+        </section>
+
+        <section class="default light">
+            <div class="section-team-area area-clientes">
+                <div class="section-title-client">CONTACT US</div>
+                <div class="section-desc">OUR AGENCY LOCATED IN MELBOURNE, AUSTRALIA</div>
+                <div class="section-formulario">
+                    <form action="formulario" autocomplete="off">
+                        <div class="formulario-area">
+                            <div class="formulario formulario1">
+                                <input type="text" placeholder="NAME">
+                                <div></div>
+                            </div>
+                            <div class="formulario formulario2">
+                                <input type="email" placeholder="EMAIL">
+                            </div>
+                            <div class="formulario formulario3">
+                                <input type="text" placeholder="SUBJECT">
+                            </div>
+                            <div class="formulario formulario4">
+                                <input type="text" placeholder="MESSAGE">
+                            </div>
+                            <a class="button button-form" href="">SEND MESSAGE</a>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="section-map">
+            <div class="section-map--area">
+                <div class="section-map--info">
+                    <div class="section-map--info-item">
+                        <div class="section-map--info-img">
+                            <img src="assets/images/carta.png" alt="">
+                        </div>
+                        Endereço ipsum Lorem ipsum dolor sit, amet con
+                    </div>
+                    <div class="section-map--info-item">
+                        <div class="section-map--info-img">
+                            <img src="assets/images/localizacao.png" alt="">
+                        </div>
+                        Endereço ipsum Lorem ipsum dolor sit, amet con
+                    </div>
+                    <div class="section-map--info-item">
+                        <div class="section-map--info-img">
+                            <img src="assets/images/telefone.png" alt="">
+                        </div>
+                        Endereço ipsum Lorem ipsum dolor sit, amet con
+                    </div>
+                    <div class="section-map--info-item">
+                        <div class="section-map--info-img">
+                            <img src="assets/images/arroba.png" alt="">
+                        </div>
+                        Endereço ipsum Lorem ipsum dolor sit, amet con
+                    </div>
+                    <div class="section-map--info-item">
+                        <div class="section-map--info-img">
+                            <img src="assets/images/web.png" alt="">
+                        </div>
+                        Endereço ipsum Lorem ipsum dolor sit, amet con
+                    </div>
+                </div>
             </div>
         </section>
     </main>
+    <footer>
+        <section class="default dark footer">
+            <div class="section-body">
+                <div class="section-footer">
+                    <div class="footer-area-social">
+                        <div class="section-team--social section-footer--social">
+                            <a href=""><img src="assets/images/facebook.png" alt=""></a>
+                            <a class="active-social" href=""><img src="assets/images/googleplus.png" alt=""></a>
+                            <a href=""><img src="assets/images/linkedin.png" alt=""></a>
+                            <a href=""><img src="assets/images/pinterest.png" alt=""></a>
+                            <a href=""><img src="assets/images/twitter.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="awax">
+                        <h1>AWAX</h1>
+                    </div>
+                    <div class="section-footer--text">
+                        <p>Nulla Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero iure excepturi adipisci?
+                            Facilis tenetur nulla ab voluptatum quae maxime fugit, similique dicta eligendi at sunt nostrum
+                            minima explicabo a magni.
+                        </p>
+                        <p>Nulla Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero iure excepturi adipisci?
+                            Facilis tenetur nulla ab voluptatum quae maxime fugit, similique dicta eligendi at sunt nostrum
+                            minima explicabo a magni.
+                        </p>
+                    </div>
+                    <div class="formulario-area-footer">
+                        <div class="area-formulario">
+                            <form action="formulario" autocomplete="off">
+                                <div class="campo-email">
+                                    <input type="email" placeholder="EMAIL TO SUBSCRIBE">
+                                </div>
+                                <a class="button button-form" href="">SUBSCRIBE</a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+        </section>
 
+    </footer>
 </body>
 
 </html>

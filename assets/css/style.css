@@ -45,6 +45,9 @@ header {
     background-color: var(--dourado);
     border-radius: 40px;
 }
+.menu-opener{
+    display: none;
+}
 .menu{
     display: flex;
     flex: 1;
@@ -415,19 +418,23 @@ header {
 }
 
 .section-body-empresas{
-    display: flex;
-    margin: -100px;
-    padding: 30px 40px;
     border: 1px solid #CCC;
-    justify-content:space-evenly;
-    align-items: center;
     background-color: white;
+    max-height: 160px;
 }
-.empresas a{
-    padding: 50px;
+.section-empresas{
+    display: flex;
+    justify-content: center;
+    margin: 50px 0px;
+}
+.empresas-img{
+   padding-left: 90px;
+}
+.empresas:last-child{
+    padding-left: 0;
 }
 
-.price-section{
+.section-prices{
     display: flex;
     justify-content: space-between;
     background-color: #f7f7f7;
@@ -456,17 +463,24 @@ header {
 }
 
 .section-premium{
-    max-height: 400px;
+    display: flex;
     margin-top: 80px;
 }
-.book-img{
+
+.section-premium--right{
     background-image: url('/media/livros.png');
     background-size:cover;
     background-position: center;
-    width: 350px;
-    overflow: hidden;
-    margin-right: 110px;
-
+    width: 370px;
+    height: 380px;
+}
+.section-premium--left{
+    flex: 1;
+ 
+}
+.section-premium--left p{
+    font-size: 14px;
+    line-height: 25px;
 }
 
 .title-premium img{
@@ -480,6 +494,621 @@ header {
     margin-bottom: 30px;
     margin-left: 50px;
     color: #828282;
-    
 }
 
+.premium-pointers{
+    margin-top: 30px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.premium-pointers .pointer{
+    width: 15px;
+    height: 15px;
+    border: 2px solid var(--dourado);
+    border-radius: 8px;
+    margin-left: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+.premium-pointers .pointer.active{
+    background-color: var(--dourado);
+}
+.premium-footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.button-premium{
+    max-width: 190px;
+    height: 40px;
+}
+
+.facts{
+    border: none;
+}
+.facts:first-child{
+    border: none;
+}
+.facts h1{
+    color: var(--dourado);
+    font-size: 35px;
+}
+.section-redes-sociais{
+    padding: 0;
+}
+.section-body-redes-sociais{
+    border: 1px solid #CCC;
+    background-color: white;
+    border-left: none;
+    border-right: none;
+}
+.redes-sociais{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+}
+.redes-sociais img{
+    width: 13px;
+    height: 13px;
+    margin-left: 30px;
+}
+.redes-sociais p{
+    color: #828282;
+    margin-left: 15px;
+}
+#share{
+    width: 22px;
+    height: 25px;
+}
+.share{
+    display: flex;
+    align-items: center;
+}
+.twitter, .linkedin, .facebook, .googleplus, .pinterest{
+    background-color: #36c5f1;
+    width: 35px;
+    height: 35px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 60px;
+}
+
+.linkedin{
+    background-color: #137eb4;
+}
+.facebook{
+    background-color: #316398;
+}
+.googleplus{
+    background-color: #e64238;
+}
+.pinterest{
+    background-color: #b61c28;
+}
+
+.section-formulario{
+    display: flex;
+    justify-content: center;
+}
+.formulario1{
+    grid-area: formulario1;
+}
+.formulario1 input{
+    width: 260px;
+}
+
+.formulario2{
+    grid-area: formulario2;
+}
+.formulario2 input{
+    width: 260px;
+}
+
+.formulario3{
+    grid-area: formulario3;
+}
+.formulario3 input{
+    width: 540px;
+}
+
+.formulario4{
+    grid-area: formulario4;
+}
+.formulario4 input{
+    margin-top: 90px;
+    width: 540px;
+}
+.button-form{
+    grid-area: button;
+}
+
+.formulario-area{
+    display: grid;
+    gap: 10px;
+    grid-template-areas: 
+    "formulario1 formulario2"
+    "formulario3 formulario3"
+    "formulario4 formulario4"
+    "button button";
+
+}
+
+.formulario-area input{
+    background-color: #f7f7f7;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-color: #9f9f9f;
+    padding-bottom: 15px;
+    margin-bottom: 45px;
+    height: 50px;
+}
+.formulario-area input::placeholder{
+    color: #9f9f9f;
+}
+.button-form{
+    width: 190px;
+    height: 40px;
+    justify-content: center;
+    margin: auto;
+    text-align: center;
+}
+
+.section-map{
+    background-image: url(../images/mapa.jpg);
+    background-size: cover;
+    background-position: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.section-map--area{
+    width: 100vh;
+    max-width: 1140px;
+}
+.section-map--info{
+    width: 50%;
+    padding: 30px;
+    background-color: white;
+    color: black;
+    margin: auto;
+}
+.section-map--info-item{
+    display: flex;
+    align-items: center;
+    color: #999;
+    margin-bottom: 10px;
+}
+.section-map--info-img{
+    width: 30px;
+    height: 30px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    background-color: #999;
+    border-radius: 15px;
+    margin-right: 15px;
+}
+.section-map--info-img img{
+    width: 15px;
+    height: auto;
+}
+
+.footer{
+    padding-top: 35px;
+}
+.section-footer{
+    display: flex;
+
+}
+
+.footer-area-social{
+    display: flex;
+    flex-direction: column;
+    margin-right: 110px;
+}
+.section-footer--social{
+    margin: 0;
+    width: 271px;
+    margin-bottom: 140px;
+}
+.section-footer--social a{
+    height: 35px;
+    width: 35px;
+    border-radius: 20px;
+    background-color: #373737;
+}
+.section-footer--social .active-social{
+    background-color: var(--dourado);
+}
+
+.section-footer--text{
+    width: 350px;
+    height: 190px;
+    margin-right: 35px;
+}
+
+.formulario-area-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #373737;
+    height: 200px;
+    width: 350px;
+    border-radius: 5px;
+}
+.area-formulario{
+    width: 230px;
+    height: 120px;
+    padding: 10px;
+}
+.campo-email input{
+    width: 220px;
+    background-color: #373737;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+}
+.campo-email input::placeholder{
+    color: #9d9d9d;
+    text-align: center;
+}
+
+
+@media (min-width: 450px) and (max-width: 800px){
+    .logo{
+        margin-left: 30px;
+    }
+    .menu-opener{
+        display: block;
+        width: 45px;
+        margin-right: 30px;
+    }
+    nav {
+        display: none;
+        position: absolute;
+        z-index: 99;
+        background-color: rgba(0, 0, 0, 0.9);
+        width: 70vw;
+        height: calc(100vh - 100px);
+        top: 100px;
+        right: 0;
+    }
+    .menu ul {
+        flex-direction: column;
+    }
+    .menu li a{
+        font-weight: bold;
+        height: 80px;
+        font-size: 27px;
+        margin-right: 50px;
+        border: 0;
+    }
+    .menu li.active a{
+        border: 0;
+        color: var(--dourado);
+    }
+    .section-aboutus{
+        flex-direction: column;
+    }
+    .section-aboutus--left{
+        margin: 10px 30px 30px 30px;
+    }
+    .section-aboutus--right{
+        width: auto;
+    }
+    .section-services{
+        flex-wrap: wrap;
+    }
+    .section-service{
+        min-width: 50%;
+        margin-bottom: 30px;
+    }
+    .section-service:first-child{
+      border-left: 0;
+    }
+    .section-team{
+        max-width: 580px;
+    }
+    .section-map{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .section-prices{
+        flex-direction: column;
+    }
+    .active-price{
+        background-color: var(--dourado);
+    }
+   
+    .section-premium--right{
+        width: 280px;
+        height: 280px;
+        margin: auto;
+        margin-bottom: 30px;
+    }
+    .section-premium{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 50px;
+   
+    }
+  
+    .section-map--area{
+        width: auto;
+    }
+    .section-map--info{
+        width: auto;
+    }
+    .section-map--info-item{
+        margin-bottom: 20px;
+    }
+    .section-map--info-item:last-child{
+        margin-bottom: 0;
+    }
+    .formulario-area-footer{
+        margin: 0;
+        width: 350px;
+        grid-area: formulario-area-footer;
+        height: 185px;
+     }
+    .footer-area-social{
+        grid-area: footer-area-social;
+        margin: 40px 70px;
+    }
+    .section-footer--social{
+        margin: 0;
+        justify-content: center;
+    }
+    .section-footer--text{
+       grid-area: section-footer--text;
+       margin: 10px 20px;
+    }
+    .awax{
+        grid-area: awax;
+        text-align: center;
+        margin-top: 40px;
+        margin-right: 70px;
+    }
+    .section-footer{
+        display: grid;
+        grid-template-areas: 
+        "section-footer--text"
+        "footer-area-social"
+        "formulario-area-footer"
+        "awax";
+        justify-content: center;
+        margin-left: 70px;
+    }  
+  
+}
+
+
+@media (max-width: 450px){
+    .logo{
+        margin-left: 30px;
+    }
+    .menu-opener{
+        display: block;
+        width: 45px;
+        margin-right: 30px;
+    }
+    nav {
+        display: none;
+        position: absolute;
+        z-index: 99;
+        background-color: rgba(0, 0, 0, 0.9);
+        width: 80vw;
+        height: calc(100vh - 100px);
+        top: 100px;
+        right: 0;
+    }
+    .menu ul {
+        flex-direction: column;
+    }
+    .menu li a{
+        font-weight: bold;
+        height: 60px;
+        font-size: 20px;
+        margin-right: 30px;
+        border: 0;
+    }
+    .menu li.active a{
+        border: 0;
+        color: var(--dourado);
+    }
+
+    .banner h1{
+        font-size: 30px;
+    }
+    .banner h2{
+        font-size: 20px;
+    }
+
+    .section-aboutus{
+        flex-direction: column;
+    }
+    .section-aboutus--left{
+        margin: 10px 30px 30px 30px;
+    }
+    .section-aboutus--right{
+        width: auto;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .section-aboutus--right img{
+        width: 100%;
+    }
+
+    .section-services{
+        flex-wrap: wrap;
+    }
+    .section-service{
+        min-width: 100%;
+        margin-bottom: 30px;
+    }
+    .section-service:first-child{
+      border-left: 0;
+    }
+
+    .section-projects--filters{
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .section-projects--photo{
+        width: 320px;
+    }
+    .section-projects--photoarea{
+        width: 300px;
+        height: 190px;
+    }
+    .section-team{
+        max-width: 270px;
+    }
+
+    .empresas-img{
+        padding-left: 50px;
+        min-width: 50%;
+    }
+
+    .section-prices{
+        flex-direction: column;
+    }
+    .prices{
+        margin-bottom: 15px;
+    }
+    .luxes{
+        display: none;
+    }
+    .active-price{
+        background-color: var(--dourado);
+    }
+    .section-premium{
+        display: flex;
+        flex-direction: column;
+        margin: 50px;
+        max-width: 360px;
+    }
+    .section-premium--right{
+        width: 300px;
+        height: 280px;
+        margin-bottom: 30px;
+    }
+ 
+    .fact-none{
+        display: none;
+    }
+
+    .redes-sociais{
+        height: 120px;
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 370px;
+        align-items: center;
+
+    }
+    #share{
+        display: none;
+    }    
+    #tell-about-us{
+       text-align: center;
+       width: 370px;
+    }
+    
+    .redes-sociais img{
+      margin-left: 0;
+      margin-top:30px;
+    }
+    .redes-sociais p{
+       margin-top: 10px;
+       margin-right: 14px;
+    }
+
+    .formulario1 input,
+    .formulario2 input,
+    .formulario3 input{
+        width: 330px;
+    }    
+    .formulario4 input{
+        margin-top: 0px;
+        width: 330px;
+    }
+    .formulario-area{
+        grid-template-areas: 
+        "formulario1 formulario1"
+        "formulario2 formulario2"
+        "formulario3 formulario3"
+        "formulario4 formulario4"
+        "button button";
+    }
+    
+    .twitter, .linkedin, .facebook, .googleplus, .pinterest{
+        width: 30px;
+        height: 30px;
+        display: flex;
+        flex-direction: column;
+        margin-left: 20px;
+        margin-bottom: 30px;
+    }
+    .section-map{
+        padding: 0;
+        padding-bottom: 250px;
+    }
+    .section-map--area{
+        width: auto;
+    }
+    .section-map--info{
+        width: auto;
+    }
+    .section-map--info-item{
+        margin-bottom: 20px;
+    }
+    .section-map--info-item:last-child{
+        margin-bottom: 0;
+    }
+
+    .formulario-area-footer{
+        width: 330px;
+        grid-area: formulario-area-footer;
+        height: 185px;
+        margin: auto;
+     }
+     .footer-area-social{
+        grid-area: footer-area-social;
+        margin: auto;
+    }
+    .section-footer--social{
+        margin: 40px 40px;
+    }
+    .section-footer--text{
+       grid-area: section-footer--text;
+       margin: auto;
+       text-align: center;
+    }
+    
+    .awax{
+        grid-area: awax;
+        text-align: center;
+        margin: 0;
+    }
+    .section-footer{
+        display: grid;
+        grid-template-areas: 
+        "formulario-area-footer"
+        "footer-area-social"
+        "section-footer--text"
+        "awax";
+        margin: 0;    
+        padding: 0;
+    }  
+    
+}
